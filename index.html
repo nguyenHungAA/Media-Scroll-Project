@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Media Scroll Project Demo</title>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to the Media Scroll Project</h1>
+        <p>This is a simple demo page for the Media Scroll extension.</p>
+        <p>Use the extension to scroll through social media without touching your device.</p>
+    </div>
+    <div>
+        <button id="enable-webcam" class="btn">Click to enable webcam</button>
+        <button id="disable-webcam" class="btn inactive">Click to disable webcam</button>
+    </div>
+    <div id="webcam-container">
+        <video id="webcam" autoplay playsinline></video>
+    </div>
+
+    <div>
+        <p>Result: </p>
+        <p id="gesture-output"></p>
+    </div>
+
+
+    <script src="src/functions.js" type="module"></script>
+    <noscript>
+        Your browser does not support scripts.
+        Please enable it to use the scrolling feature.
+    </noscript>
+</body>
+
+</html>
