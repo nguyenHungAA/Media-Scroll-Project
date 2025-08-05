@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/handtrack.min.js"></script>
+    <title>Media Scroll</title>
+    <style>
+        .container {
+            padding: 4px 8px;
+            min-width: 300px;
+        }
+
+        .options-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 12px;
+        }
+
+        .option-button {
+            background-color: #000;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .option-button:disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Enable webcam to use this extension</h3>
+        <div class="options-container">
+            <button id="enable-webcam-button" class="option-button">Enable Webcam</button>
+            <button id="disable-webcam-button" class="option-button">Disable Webcam</button>
+        </div>
+        <div id="status" class="status"></div>
+    </div>
+    <script src="../js/popup.js"></script>
+</body>
+
+</html>

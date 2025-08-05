@@ -1,0 +1,36 @@
+{
+    "name": "Media Scroll",
+    "description": "A simple extension for scrolling social media without touching the device.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "videoCapture"
+    ],
+    "host_permissions": [
+        "https://www.instagram.com/*"
+    ],
+    "action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png"
+        }
+    },
+    "options_page": "html/options.html",
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "handtrack.min.js",
+                "html/popup.html",
+                "html/options.html",
+                "js/popup.js",
+                "icons/icon16.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
