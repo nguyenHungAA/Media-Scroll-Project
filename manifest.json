@@ -7,8 +7,11 @@
         "storage",
         "activeTab",
         "scripting",
-        "videoCapture"
+        "offscreen"
     ],
+    "background": {
+        "service_worker": "js/background.js"
+    },
     "host_permissions": [
         "https://www.instagram.com/*"
     ],
@@ -18,13 +21,10 @@
             "16": "icons/icon16.png"
         }
     },
-    "options_page": "html/options.html",
     "web_accessible_resources": [
         {
             "resources": [
-                "handtrack.min.js",
                 "html/popup.html",
-                "html/options.html",
                 "js/popup.js",
                 "icons/icon16.png"
             ],
@@ -32,5 +32,8 @@
                 "<all_urls>"
             ]
         }
-    ]
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
 }
